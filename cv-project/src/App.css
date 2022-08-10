@@ -128,9 +128,19 @@ table {
   border-spacing: 0;
 }
 
+#root {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0px;
+}
+
 .Wrapper {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 10% auto auto;
   font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  width: 60%;
+  border: 1px solid black;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
 }

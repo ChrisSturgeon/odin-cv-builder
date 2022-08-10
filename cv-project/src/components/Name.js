@@ -1,4 +1,3 @@
-import { toHaveDisplayValue } from '@testing-library/jest-dom/dist/matchers';
 import React, { Component } from 'react';
 import '../styles/Name.css';
 
