@@ -56,9 +56,11 @@ class Name extends Component {
             type="text"
           ></input>
           <button className="btn" type="submit">
-            Save
+            <i class="fa-solid fa-thumbs-up"></i>
           </button>
-          <button onClick={this.cancelEdit}>Cancel</button>
+          <button className="btn" onClick={this.cancelEdit}>
+            <i class="fa-solid fa-xmark"></i>
+          </button>
         </form>
       );
     } else {

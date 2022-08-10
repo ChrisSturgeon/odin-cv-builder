@@ -9,11 +9,17 @@ h1 {
 
 .NameBar {
   display: grid;
-  grid-template-columns: 80% 10% 10%;
+  grid-template-columns: 70% 15% 15%;
+  align-items: center;
 }
 
 input {
   padding: 0px;
   border: 1px solid black;
   outline: none;
+}
+
+.btn {
+  font-size: 1.25rem;
+  height: 75%;
 }
