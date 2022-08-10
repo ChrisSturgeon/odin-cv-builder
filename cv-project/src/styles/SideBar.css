@@ -1,0 +1,8 @@
+.SideBar {
+  grid-column: 2 / 3;
+  grid-row: 1 / -1;
+  background-color: rgb(136, 192, 226);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

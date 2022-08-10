@@ -1,0 +1,19 @@
+.Name {
+  font-size: 3rem;
+}
+
+h1 {
+  border: 1px solid black;
+  padding: 3.5px 0px;
+}
+
+.NameBar {
+  display: grid;
+  grid-template-columns: 80% 10% 10%;
+}
+
+input {
+  padding: 0px;
+  border: 1px solid black;
+  outline: none;
+}
