@@ -3,7 +3,7 @@ import './App.css';
 import Name from './components/Name';
 import SideBar from './components/SideBar';
 import Contact from './components/Contact';
-import Profile from './components/Profile';
+import Profile from './components/profile';
 
 function App() {
   return (
