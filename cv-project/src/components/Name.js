@@ -47,26 +47,29 @@ class Name extends Component {
   render() {
     if (this.state.editing === true) {
       return (
-        <form onSubmit={this.saveEdit} className="NameBar">
+        <form className="header" onSubmit={this.saveEdit}>
           <input
             onChange={this.handleChange}
             className="Name"
             defaultValue={this.state.name}
             type="text"
+            autoFocus
           ></input>
-          <button className="btn" type="submit">
-            <i class="fa-solid fa-thumbs-up"></i>
+          <button className="save-btn" type="submit">
+            <i class="fa-solid fa-circle-check"></i>
           </button>
-          <button className="btn" onClick={this.cancelEdit}>
-            <i class="fa-solid fa-xmark"></i>
+          <button className="cancel-btn" onClick={this.cancelEdit}>
+            <i class="fa-solid fa-trash-can"></i>
           </button>
         </form>
       );
     } else {
       return (
-        <h1 onDoubleClick={this.clickEdit} className="Name">
-          {this.state.name}
-        </h1>
+        <div className="header">
+          <h1 className="Name" onDoubleClick={this.clickEdit}>
+            {this.state.name}
+          </h1>
+        </div>
       );
     }
   }

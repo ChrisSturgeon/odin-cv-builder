@@ -1,0 +1,51 @@
+.save-btn,
+.cancel-btn {
+  font-size: 2rem;
+}
+
+.save-btn {
+  position: absolute;
+  top: 5vh;
+  right: 10vw;
+  height: 5vw;
+  width: 5vw;
+}
+
+.cancel-btn {
+  position: absolute;
+  top: 20vh;
+  right: 10vw;
+  height: 5vw;
+  width: 5vw;
+}
+
+ul,
+input {
+  font-size: 1.25vw;
+  /* text-align: center; */
+}
+
+h3 {
+  font-size: 2vw;
+  font-weight: bold;
+}
+
+.contact-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0px;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5vw;
+}
+
+.with-icon {
+  display: flex;
+  gap: 10px;
+}

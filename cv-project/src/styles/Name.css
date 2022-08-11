@@ -1,25 +1,43 @@
 .Name {
-  font-size: 3rem;
+  font-size: 3vw;
+  font-weight: bold;
 }
 
 h1 {
-  border: 1px solid black;
-  padding: 3.5px 0px;
 }
 
-.NameBar {
-  display: grid;
-  grid-template-columns: 70% 15% 15%;
+.header {
+  display: flex;
   align-items: center;
 }
 
 input {
   padding: 0px;
-  border: 1px solid black;
   outline: none;
 }
 
-.btn {
-  font-size: 1.25rem;
-  height: 75%;
+input {
+  background-color: rgb(226, 226, 226);
+  border-radius: 5px;
+}
+
+.save-btn,
+.cancel-btn {
+  font-size: 2rem;
+}
+
+.save-btn {
+  position: absolute;
+  top: 5vh;
+  right: 10vw;
+  height: 5vw;
+  width: 5vw;
+}
+
+.cancel-btn {
+  position: absolute;
+  top: 20vh;
+  right: 10vw;
+  height: 5vw;
+  width: 5vw;
 }

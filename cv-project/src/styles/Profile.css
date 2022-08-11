@@ -1,4 +1,21 @@
 .textArea {
-  width: 100%;
+  width: 90%;
   height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  outline: none;
+}
+
+.profile-text,
+textArea {
+  font-size: 1.25vw;
+  width: 90%;
+}
+
+h2 {
+  font-size: 1.75vw;
+  font-weight: bold;
+}
+
+.profile-header {
+  margin-bottom: 15px;
 }

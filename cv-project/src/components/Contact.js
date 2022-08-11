@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import uniqid from 'uniqid';
+import '../styles/Contact.css';
 
 class Contact extends Component {
   constructor() {
@@ -8,32 +9,38 @@ class Contact extends Component {
     this.clickEdit = this.clickEdit.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.saveChange = this.saveChange.bind(this);
+    this.addNew = this.addNew.bind(this);
 
     this.state = {
+      template: {
+        text: 'Type here',
+        editing: false,
+        id: uniqid(),
+      },
       comTypes: [
         {
-          type: 'Tel',
+          icon: <i className="fa-solid fa-phone"></i>,
           text: '07713821900',
           tempText: '07713821900',
           editing: false,
           id: uniqid(),
         },
         {
-          type: 'email',
+          icon: <i className="fa-solid fa-envelope"></i>,
           text: 'sturgeon.chris@gmail.com',
           tempText: 'sturgeon.chris@gmail.com',
           editing: false,
           id: uniqid(),
         },
         {
-          type: 'website',
-          text: 'www.google.com',
-          tempText: 'www.google.com',
+          icon: <i className="fa-solid fa-globe"></i>,
+          text: 'bit.ly/3pbMo6M',
+          tempText: 'bit.ly/3pbMo6M',
           editing: false,
           id: uniqid(),
         },
         {
-          type: 'location',
+          icon: <i className="fa-solid fa-location-dot"></i>,
           text: 'Hampshire, UK',
           tempText: 'Hampshire, UK',
           editing: false,
@@ -76,19 +83,26 @@ class Contact extends Component {
       return element.id === id;
     });
 
-    console.log(index);
-
     const revisedComTypes = this.state.comTypes;
     revisedComTypes[index].text = this.state.comTypes[index].tempText;
     revisedComTypes[index].editing = false;
 
-    console.log(revisedComTypes[index].text);
-
     this.setState({
       comTypes: revisedComTypes,
     });
+  }
 
-    console.log(this.state.comTypes);
+  addNew() {
+    const template = {
+      type: 'Tel',
+      text: 'Type here',
+      editing: false,
+      id: uniqid(),
+    };
+
+    this.setState({
+      comTypes: this.state.comTypes.concat(template),
+    });
   }
 
   render() {
@@ -97,32 +111,44 @@ class Contact extends Component {
     const setEdit = this.saveChange;
 
     return (
-      <ul>
-        {this.state.comTypes.map(function (type) {
-          if (type.editing === true) {
-            return (
-              <form
-                className="NameBar"
-                onSubmit={setEdit.bind(this, type.id)}
-                key={type.id}
-              >
-                <input
-                  onChange={makeChange.bind(this, type.id)}
-                  defaultValue={type.text}
-                ></input>
-                <button type="submit">Save</button>
-                <button>Cancel</button>
-              </form>
-            );
-          } else {
-            return (
-              <div key={type.id}>
-                <p onDoubleClick={() => startEdit(type.id)}>{type.text}</p>
-              </div>
-            );
-          }
-        })}
-      </ul>
+      <div className="contact-div">
+        <h3>Contact Info</h3>
+        <ul className="testPadding">
+          {this.state.comTypes.map(function (type) {
+            if (type.editing === true) {
+              return (
+                <form onSubmit={setEdit.bind(this, type.id)} key={type.id}>
+                  <input
+                    autoFocus
+                    onChange={makeChange.bind(this, type.id)}
+                    defaultValue={type.text}
+                  ></input>
+                  <button className="save-btn" type="submit">
+                    <i className="fa-solid fa-circle-check"></i>
+                  </button>
+                  <button className="cancel-btn">
+                    <i className="fa-solid fa-trash-can"></i>
+                  </button>
+                </form>
+              );
+            } else if (type.icon) {
+              return (
+                <div className="with-icon" key={type.id}>
+                  <p>{type.icon}</p>
+                  <p onDoubleClick={() => startEdit(type.id)}>{type.text}</p>
+                </div>
+              );
+            } else {
+              return (
+                <div key={type.id}>
+                  <p onDoubleClick={() => startEdit(type.id)}>{type.text}</p>
+                </div>
+              );
+            }
+          })}
+          <button onClick={this.addNew}>Add New</button>
+        </ul>
+      </div>
     );
   }
 }
