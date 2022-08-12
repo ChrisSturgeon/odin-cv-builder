@@ -146,7 +146,9 @@ class Contact extends Component {
               );
             }
           })}
-          <button onClick={this.addNew}>Add New</button>
+          <button onClick={this.addNew}>
+            <i className="fa-solid fa-plus"></i>
+          </button>
         </ul>
       </div>
     );

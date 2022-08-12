@@ -56,10 +56,10 @@ class Name extends Component {
             autoFocus
           ></input>
           <button className="save-btn" type="submit">
-            <i class="fa-solid fa-circle-check"></i>
+            <i className="fa-solid fa-circle-check"></i>
           </button>
           <button className="cancel-btn" onClick={this.cancelEdit}>
-            <i class="fa-solid fa-trash-can"></i>
+            <i className="fa-solid fa-trash-can"></i>
           </button>
         </form>
       );
