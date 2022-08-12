@@ -2,9 +2,7 @@ import { render } from '@testing-library/react';
 import './App.css';
 import Name from './components/Name';
 import SideBar from './components/SideBar';
-import Contact from './components/Contact';
 import Profile from './components/profile';
-import Education from './components/Education';
 
 function App() {
   return (
