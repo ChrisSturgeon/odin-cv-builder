@@ -105,7 +105,7 @@ class Education extends Component {
 
   addNew() {
     const template = {
-      name: 'School name',
+      name: '',
       tempName: 'School name',
       level: 'Level',
       tempLevel: 'Level',
@@ -141,6 +141,7 @@ class Education extends Component {
                     name="name"
                     onChange={this.handleChange.bind(this, school.id)}
                     defaultValue={school.name}
+                    placeholder="Instituion name..."
                   ></input>
                   <input
                     name="level"
