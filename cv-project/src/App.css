@@ -135,6 +135,7 @@ table {
 }
 
 .Wrapper {
+  min-height: 21cm;
   display: grid;
   grid-template-columns: 40vw 20vw;
   grid-template-rows: 10% auto auto;
@@ -144,4 +145,10 @@ table {
   border: 1px solid black;
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
   padding: 20px;
+}
+
+.main-column {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
 }

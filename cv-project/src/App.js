@@ -3,12 +3,16 @@ import './App.css';
 import Name from './components/Name';
 import SideBar from './components/SideBar';
 import Profile from './components/profile';
+import Work from './components/Work';
 
 function App() {
   return (
     <div className="Wrapper">
-      <Name />
-      <Profile />
+      <div className="main-column">
+        <Name />
+        <Profile />
+        <Work />
+      </div>
       <SideBar></SideBar>
     </div>
   );
